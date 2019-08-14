@@ -1,9 +1,9 @@
 {
     "name": "OpenMageModuleFostering/Poq_Integration",
     "type": "magento-module",
-    "license": "Apache-Software-License-(ASL)",
+    "license": "ASL",
     "homepage": "",
-    "description": "This integration forms a connection between the Magento and Poq Studio platforms. ",
+    "description": "This integration forms a connection between the Magento and Poq Studio platforms.",
     "authors": [
     {
         "name": "Oyvind Henriksen",

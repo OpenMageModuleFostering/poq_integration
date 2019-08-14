@@ -9,7 +9,7 @@
 <config>
     <modules>
         <Poq_Integration>
-            <version>1.0.0.0.1</version>
+            <version>2.0.0.3.4</version>
         </Poq_Integration>
     </modules>
     <global>
@@ -41,7 +41,8 @@
                 <integration_checkout_requiresignedrequest_select>0</integration_checkout_requiresignedrequest_select>
                 <integration_checkout_limitreferrrer_select>0</integration_checkout_limitreferrrer_select>
                 <integration_checkout_safereferrerlist_input></integration_checkout_safereferrerlist_input>
-                <integration_checkout_trackingcode_input><![CDATA[tm_source=mobile&utm_campaign=poq]]></integration_checkout_trackingcode_input>
+                <integration_checkout_trackingcode_input><![CDATA[utm_source=mobile&utm_campaign=poq]]></integration_checkout_trackingcode_input>
+                <integration_checkout_sendorderemail_input>0</integration_checkout_sendorderemail_input>
             </integration_checkout_group>
         </integration>
     </default>

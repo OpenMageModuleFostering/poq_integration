@@ -61,6 +61,61 @@
                             <show_in_store>1</show_in_store>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                         </integration_feed_taxrates_select>
+                        <integration_feed_description_fields translate="label">
+                            <label>Description Fields</label>
+                            <comment>Comma-seperated strings to specify where description value for the products should pulled through. Leave blank for default.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>24</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_description_fields>
+                        <integration_feed_description_values translate="label">
+                            <label>Description Values</label>
+                            <comment>Comma-seperated strings to specify description title in the feed. Number of values should match with number of description fields above, in order to show them in the feed.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_description_values>
+                        <integration_feed_barcode_field translate="label">
+                            <label>Barcode Field</label>
+                            <comment>Set to add barcode into product feed.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_barcode_field>
+                        <integration_feed_productPrice_field translate="label">
+                            <label>Product Price Field</label>
+                            <comment>Specify how product price information will be read.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>27</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_productPrice_field>
+                        <integration_feed_specialPrice_field translate="label">
+                            <label>Special Price Field</label>
+                            <comment>Specify how special price information will be read.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_specialPrice_field>
+                        <integration_feed_categoriesForChild_field translate="label">
+                            <label>Category information for child Products</label>
+                            <comment>If set, child products will have category information in the feed.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>29</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </integration_feed_categoriesForChild_field>
                     </fields>
                 </integration_feed_group>
                 <integration_checkout_group translate="label" module="poq_integration">
@@ -89,6 +144,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </integration_checkout_trackingcode_input>
+                        <integration_checkout_sendorderemail_input translate="label">
+                            <label>Send Order E-mails</label>
+                            <comment>If set, will be sending order confirmation e-mails to the customers after the payment completed via mobile app.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>27</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </integration_checkout_sendorderemail_input>
                     </fields>
                 </integration_checkout_group>
                 <integration_checkoutsecurity_group translate="label" module="poq_integration">

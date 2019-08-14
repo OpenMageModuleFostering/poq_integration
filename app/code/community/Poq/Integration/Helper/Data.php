@@ -72,6 +72,50 @@ class Poq_Integration_Helper_Data extends Mage_Core_Helper_Data {
      * @var string
      */
     public $tracking_code;
+    
+    /**
+     * Send order e-mails
+     * @var string
+     */
+    public $send_order_emails;
+
+     /**
+     * Description Field Names
+     * @var string
+     */
+    public $description_fields;
+
+    /**
+     * Description Headers
+     * @var string
+     */
+    public $description_values;
+
+    
+    /**
+     * Barcode Field
+     * @var string
+     */
+    public $barcode_field;
+
+    /**
+     * Price Field
+     * @var string
+     */
+    public $productPrice_field;
+
+    /**
+     * Special Price Field
+     * @var string
+     */
+    public $specialPrice_field;
+
+    /**
+     * Sub Categories For Child
+     * @var boolean
+     */
+    public $setCategories_field;
+
 
     /**
      * Get settings
@@ -92,6 +136,10 @@ class Poq_Integration_Helper_Data extends Mage_Core_Helper_Data {
         // Get checkout url
         $this->checkout_url = Mage::getStoreConfig('integration/integration_checkout_group/integration_checkout_checkout_input', Mage::app()->getStore());
         
+        // Get send order e-mail options
+        $this->send_order_emails = Mage::getStoreConfig('integration/integration_checkout_group/integration_checkout_sendorderemail_input', Mage::app()->getStore());
+        
+        
         // Parse require https
         $this->requires_https = filter_var(Mage::getStoreConfig('integration/integration_checkoutsecurity_group/integration_checkout_requirehttps_select', Mage::app()->getStore()), FILTER_VALIDATE_BOOLEAN);
         
@@ -110,6 +158,24 @@ class Poq_Integration_Helper_Data extends Mage_Core_Helper_Data {
         
         // Get tracking code
         $this->tracking_code = Mage::getStoreConfig('integration/integration_checkout_group/integration_checkout_trackingcode_input', Mage::app()->getStore());
+
+        // Get description field names
+        $this->description_fields = Mage::getStoreConfig('integration/integration_feed_group/integration_feed_description_fields', Mage::app()->getStore());
+
+        // Get description values
+        $this->description_values = Mage::getStoreConfig('integration/integration_feed_group/integration_feed_description_values', Mage::app()->getStore());
+
+        // Get barcode field name
+        $this->barcode_field = Mage::getStoreConfig('integration/integration_feed_group/integration_feed_barcode_field', Mage::app()->getStore());
+
+        // Get product price name
+        $this->productPrice_field = Mage::getStoreConfig('integration/integration_feed_group/integration_feed_productPrice_field', Mage::app()->getStore());
+
+        // Get special price name
+        $this->specialPrice_field = Mage::getStoreConfig('integration/integration_feed_group/integration_feed_specialPrice_field', Mage::app()->getStore());
+
+        // Get set categories for child name
+        $this->setCategories_field = filter_var(Mage::getStoreConfig('integration/integration_feed_group/integration_feed_categoriesForChild_field', Mage::app()->getStore()), FILTER_VALIDATE_BOOLEAN);
 
         // return settings
         return $this;
