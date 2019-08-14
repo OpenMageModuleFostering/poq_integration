@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Poq_Integration</name>
+    <version>1.0.0.0.1</version>
+    <stability>stable</stability>
+    <license>Apache Software License (ASL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This integration forms a connection between the Magento and Poq Studio platforms. </summary>
+    <description>The extension has two main features: Exposing your catalogue information in the Poq Feed Format and Accepting a shopping cart transfer from the Poq Studio platform.  </description>
+    <notes>Integration Settings tab added to System/Configuration.</notes>
+    <authors><author><name>Oyvind Henriksen</name><user>poqmagento</user><email>info@poqstudio.com</email></author></authors>
+    <date>2014-02-14</date>
+    <time>14:49:03</time>
+    <contents><target name="magecommunity"><dir name="Poq"><dir name="Integration"><dir name="Helper"><file name="Data.php" hash="2b539c77fd12d90480c851b1645c0431"/></dir><dir name="controllers"><file name="IndexController.php" hash="92f389cd176d045eafa401bb6d0e69da"/></dir><dir name="etc"><file name="adminhtml.xml" hash="545b50fa7d354adb75a6bc27ff2ef41e"/><file name="config.xml" hash="b1009e366da42a647bec68a5286647e7"/><file name="system.xml" hash="22e24622eee78398df04467814e54a86"/></dir></dir><file name=".DS_Store" hash="8f897c363150648e08d6a4dcfb47ac8c"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="poqintegration"><file name="index.phtml" hash=""/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Poq_Integration.xml" hash="f735b9c01c16c559a05ba50185ef8a61"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

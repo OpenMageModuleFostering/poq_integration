@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module configuration
+ *
+ * @author Poq Studio
+ */
+-->
+<config>
+    <modules>
+        <Poq_Integration>
+            <version>1.0.0.0.1</version>
+        </Poq_Integration>
+    </modules>
+    <global>
+        <helpers>
+            <poq_integration>
+                <class>Poq_Integration_Helper</class>
+            </poq_integration>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <poq_integration>
+                <use>standard</use>
+                <args>
+                    <module>Poq_Integration</module>
+                    <frontName>poq</frontName>
+                </args>
+            </poq_integration>
+        </routers>
+    </frontend>
+    <default>
+        <integration>
+            <integration_feed_group>
+                <integration_feed_taxrates_select>1</integration_feed_taxrates_select>
+            </integration_feed_group>
+            <integration_checkout_group>
+                <integration_checkout_checkout_input><![CDATA[/checkout/]]></integration_checkout_checkout_input>
+                <integration_checkout_requirehttps_select>0</integration_checkout_requirehttps_select>
+                <integration_checkout_requiresignedrequest_select>0</integration_checkout_requiresignedrequest_select>
+                <integration_checkout_limitreferrrer_select>0</integration_checkout_limitreferrrer_select>
+                <integration_checkout_safereferrerlist_input></integration_checkout_safereferrerlist_input>
+                <integration_checkout_trackingcode_input><![CDATA[tm_source=mobile&utm_campaign=poq]]></integration_checkout_trackingcode_input>
+            </integration_checkout_group>
+        </integration>
+    </default>
+</config>

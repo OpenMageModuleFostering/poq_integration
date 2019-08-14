@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <integrationconfig translate="label" module="poq_integration">
+            <label>POQ Studio</label>
+            <sort_order>99999</sort_order>
+        </integrationconfig>
+    </tabs> 
+    <sections>
+        <integration translate="label" module="poq_integration">
+            <label>Integration Settings</label>
+            <tab>integrationconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>   
+            <groups>
+                <integration_feed_group translate="label" module="poq_integration">
+                    <label>Feed Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <integration_feed_store_input translate="label">
+                            <label>Store Id: </label>
+                            <comment>Set store id if you prefer a specific store for feed integration. Otherwise, leave blank and let the default store will be used.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_store_input>
+                        <integration_feed_image_url_input translate="label">
+                            <label>Image URL: </label>
+                            <comment>Set to override images location. Will try to auto-detect this value if not set.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_image_url_input>
+                        <integration_feed_image_ignore_input translate="label">
+                            <label>Ignore Images: </label>
+                            <comment>Comma-separated strings to filter out unwanted pictures.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_feed_image_ignore_input>
+                        <integration_feed_taxrates_select translate="label">
+                            <label>Enable Tax Rate per Product</label>
+                            <comment>Set to apply custom tax rates to product prices.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>23</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </integration_feed_taxrates_select>
+                    </fields>
+                </integration_feed_group>
+                <integration_checkout_group translate="label" module="poq_integration">
+                    <label>Checkout Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1001</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <integration_checkout_checkout_input translate="label">
+                            <label>Checkout URL </label>
+                            <comment>After the products are added to bag, user is redirect to this url for checkout.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_checkout_checkout_input>
+                        <integration_checkout_trackingcode_input translate="label">
+                            <label>Tracking Code</label>
+                            <comment>If set, will be added to the checkout page URL.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_checkout_trackingcode_input>
+                    </fields>
+                </integration_checkout_group>
+                <integration_checkoutsecurity_group translate="label" module="poq_integration">
+                    <label>Checkout Security Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1002</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <integration_checkout_requirehttps_select translate="label">
+                            <label>Require HTTPS</label>
+                            <comment>SSL-encrypted requests cannot be read by anyone else, and will not be stored in history.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </integration_checkout_requirehttps_select>
+                        <integration_checkout_requiresignedrequest_select translate="label">
+                            <label>Require Signed Request</label>
+                            <comment>If enabled, will require the request to be signed for additional security.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </integration_checkout_requiresignedrequest_select>
+                        <integration_checkout_signedrequeststring_input translate="label">
+                            <label>Signed Request Phrase</label>
+                            <comment>Please ask for this configuration value from Poq Studio</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>23</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_checkout_signedrequeststring_input>
+                        <integration_checkout_limitreferrrer_select translate="label">
+                            <label>Limit Referer</label>
+                            <comment>Enable this to require the request to come from a trusted source. </comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>24</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </integration_checkout_limitreferrrer_select>
+                        <integration_checkout_safereferrerlist_input translate="label">
+                            <label>Safe Referer List</label>
+                            <comment>Add comma-seperated mobile website domains here. Only use this if you enable Limit Referer option.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_checkout_safereferrerlist_input>
+                    </fields>
+                </integration_checkoutsecurity_group>
+            </groups>                 
+        </integration>
+    </sections> 
+</config>

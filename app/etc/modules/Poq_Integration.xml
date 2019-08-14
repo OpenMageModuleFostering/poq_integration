@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Module initial config
+ *
+ * @author Poq Studio
+ */
+-->
+<config>
+    <modules>
+        <Poq_Integration>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Adminhtml />
+            </depends>
+        </Poq_Integration>
+    </modules>
+</config>

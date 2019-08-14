@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento admin config
+ *
+ * @author Poq Studio
+ */
+-->
+
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow All</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <integration>
+                                        <title>Poq Integration Settings</title>
+                                    </integration>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
