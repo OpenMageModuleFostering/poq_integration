@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 This integration forms a connection between the Magento and Poq Studio platforms.
